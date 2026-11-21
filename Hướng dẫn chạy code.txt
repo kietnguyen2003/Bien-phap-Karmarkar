@@ -1,0 +1,97 @@
+HUONG DAN TAO MOI TRUONG VA CAI THU VIEN
+
+CHẠY GIAO DIỆN STREAMLIT (không cần mở notebook)
+Mở terminal tại thư mục chứa streamlit_app.py.
+
+macOS:
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m streamlit run streamlit_app.py
+
+Windows:
+py -m venv .venv
+.venv\Scripts\python.exe -m pip install -r requirements.txt
+.venv\Scripts\python.exe -m streamlit run streamlit_app.py
+
+Mở http://localhost:8501, nhập bài toán và bấm Giải bài toán.
+Lời giải hiển thị ngay trên trang; bấm Tải lời giải HTML để lưu.
+Lần sau chỉ cần chạy lại lệnh streamlit run ở trên.
+Nhấn Ctrl+C trong terminal để dừng ứng dụng.
+
+HƯỚNG DẪN NOTEBOOK CŨ
+
+1. Yêu cầu: Máy đã cài Python 3.10 trở lên.
+2. Mở thư mục dự án trong VS Code, chọn Terminal > New Terminal.
+Terminal phải đang ở thư mục chứa file requirements.txt.
+
+- Chỉ làm theo phần dành cho hệ điều hành của bạn.
+WINDOWS (PowerShell)
+Bước 1: Kiểm tra Python.
+py --version
+
+Bước 2: Tạo môi trường .venv.
+py -m venv karmarkar-project/.venv
+
+Bước 3: Kích hoạt môi trường.
+.\karmarkar-project\.venv\Scripts\Activate.ps1
+
+Nếu PowerShell chặn chạy script, chuyển terminal sang Command Prompt (cmd) và chạy:
+karmarkar-project\.venv\Scripts\activate.bat
+
+Bước 4: Cài thư viện và mã nguồn dự án. Chạy lần lượt:
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python -m pip install -e ./karmarkar-project
+
+Bước 5: Mở file Karmarkar_HTML.ipynb trong VS Code.
+Cài extension Python và Jupyter nếu chưa có.
+Bấm Select Kernel và chọn Python tại:
+karmarkar-project\.venv\Scripts\python.exe
+
+Bước 6: Bấm Run All, nhập bài toán theo hướng dẫn.
+Mở file output/Loi_giai_Karmarkar.html bằng trình duyệt để xem kết quả.
+
+Lưu ý: Nếu máy không nhận lệnh py nhưng nhận python, dùng python thay cho py ở Bước 1 và Bước 2.
+
+MACBOOK (macOS)
+
+Bước 1: Kiểm tra Python.
+python3 --version
+
+Bước 2: Tạo môi trường .venv.
+python3 -m venv karmarkar-project/.venv
+
+Bước 3: Kích hoạt môi trường.
+source karmarkar-project/.venv/bin/activate
+
+Bước 4: Cài thư viện và mã nguồn dự án. Chạy lần lượt:
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python -m pip install -e ./karmarkar-project
+
+Bước 5: Mở file Karmarkar_HTML.ipynb trong VS Code.
+Cài extension Python và Jupyter nếu chưa có.
+Bấm Select Kernel và chọn Python tại:
+karmarkar-project/.venv/bin/python
+
+Bước 6: Bấm Run All, nhập bài toán theo hướng dẫn.
+Mở file output/Loi_giai_Karmarkar.html bằng trình duyệt để xem kết quả.
+
+CÁC THƯ VIỆN ĐƯỢC CÀI TỪ requirements.txt
+
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.7
+pandas>=2
+PyYAML>=6
+pytest>=8
+nbformat>=5.9
+nbclient>=0.10
+ipykernel>=6
+
+DÙNG LẠI Ở LẦN SAU
+Không cần tạo môi trường hoặc cài lại thư viện.
+Khi mở terminal mới, chỉ cần kích hoạt lại môi trường theo Bước 3.
+Khi chạy notebook, chọn đúng kernel ở Bước 5.
+Để thoát môi trường trong terminal, chạy:
+deactivate
